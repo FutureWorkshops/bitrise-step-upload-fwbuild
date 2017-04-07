@@ -1,0 +1,79 @@
+title: "S3 Download"
+summary: "This step allows to upload binaries to FW's ota server."
+description: 
+website: https://github.com/FutureWorkshops/bitrise-step-upload-fwbuild
+source_code_url: https://github.com/FutureWorkshops/bitrise-step-upload-fwbuild
+host_os_tags:
+  - osx-10.10
+  - osx-10.9
+project_type_tags:
+  - ios
+  - android
+  - xamarin
+type_tags:
+  - amazon
+  - s3
+is_requires_admin_user: true
+is_always_run: false
+is_skippable: false
+run_if: ""
+inputs:
+  - bin_path: ''
+    opts:
+      title: "Binary path"
+      summary: Full path to the .ipa/.apk file to upload.
+      description: 
+      is_expand: true
+      is_required: true
+      value_options: []
+  - company: ''
+    opts:
+      title: "Company"
+      summary: The name of the company the app belongs to.
+      description: 
+      is_expand: true
+      is_required: true
+      value_options: []
+  - name: ''
+    opts:
+      title: "Name"
+      summary: The application name.
+      description: 
+      is_expand: true
+      is_required: true
+      value_options: []
+  - platform: ''
+    opts:
+      title: "Platform"
+      summary: The platform name (either iOS or Droid).
+      description: 
+      is_expand: true
+      is_required: true
+      value_options: []
+  - branch: '$BITRISE_GIT_BRANCH'
+    opts:
+      title: "Branch"
+      summary: The Git source branch name.
+      description: 
+      is_expand: true
+      is_required: true
+      value_options: []
+  - commit: '$ITRISE_GIT_COMMIT'
+    opts:
+      title: "Git Commit"
+      summary: The Git commit.
+      description: 
+      is_expand: true
+      is_required: true
+      value_options: []
+  - server: 'fwbuild-staging.herokuapp.com'
+    opts:
+      title: "Server"
+      summary: The hostname of the FWBuild server.
+      description: 
+      is_expand: true
+      is_required: true
+      value_options: []
+
+outputs:
+ 
