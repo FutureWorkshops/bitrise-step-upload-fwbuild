@@ -58,7 +58,7 @@ inputs:
       is_expand: true
       is_required: true
       value_options: []
-  - commit: '$ITRISE_GIT_COMMIT'
+  - commit: '$BITRISE_GIT_COMMIT'
     opts:
       title: "Git Commit"
       summary: The Git commit.
